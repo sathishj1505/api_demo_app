@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo API Test Suite">
+    <test name="Smoke Test">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="api_demo.ResponseTest">
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Regression Test">
+        <groups>
+            <run>
+                <include name="regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="api_demo.ResponseTest"/>
+        </classes>
+    </test> <!-- Test --><test name="Data Driven Test">
+    <groups>
+        <run>
+            <include name="regression"></include>
+        </run>
+    </groups>
+    <classes>
+        <class name="api_demo.RegressionTest"/>
+    </classes>
+</test> <!-- Test -->
+
+</suite> <!-- Suite -->
